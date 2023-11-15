@@ -1,0 +1,43 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           mas-se-demo
+version:        0.1.0.0
+description:    Demo
+author:         Lukas Buchli
+maintainer:     lukas.buchli@ost.ch
+copyright:      2023 Lukas Buchli
+license:        BSD-3-Clause
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Demo
+  other-modules:
+      Paths_mas_se_demo
+  autogen-modules:
+      Paths_mas_se_demo
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable demo-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_mas_se_demo
+  autogen-modules:
+      Paths_mas_se_demo
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
